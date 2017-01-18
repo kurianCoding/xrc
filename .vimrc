@@ -144,6 +144,8 @@ autocmd BufWrite *.txt :%s/\s\+$//ge
 autocmd BufWrite .vimrc :%s/\s\+$//ge
 autocmd BufWrite .tmux.conf :%s/\s\+$//ge
 autocmd BufWrite *.js :%s/\s\+$//ge
+autocmd Filetype gitcommit setlocal spell textwidth=72
+autocmd FileType gitcommit 1|execute "normal! /\[enter\]/e+1\<CR>"
 
 "settings for emmet-vim
 let g:user_emmet_mode='n'    "only enable normal mode functions.
